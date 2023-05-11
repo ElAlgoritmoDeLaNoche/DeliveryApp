@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../commons_widgets/header_text.dart';
-import '../../../commons_widgets/populars_card.dart';
+import '../../../commons_widgets/Headers/header_text.dart';
+import '../../../commons_widgets/Cards/populars_card.dart';
 
 import '../../../../../../src/utils/my_colors.dart';
 
@@ -279,7 +279,7 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
       const Spacer(),
       GestureDetector(
         onTap: () {
-          print('textAction');
+          Navigator.pushNamed(context, 'collections');
         },
         child: Row(
           children: [

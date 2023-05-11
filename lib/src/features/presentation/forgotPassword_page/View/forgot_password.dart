@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../../commons_widgets/back_button.dart';
-import '../../commons_widgets/header_text.dart';
-import '../../commons_widgets/rounded_button.dart';
+import '../../commons_widgets/BackButtons/back_button.dart';
+import '../../commons_widgets/Headers/header_text.dart';
+import '../../commons_widgets/Buttons/rounded_button.dart';
 
 import '../../commons_widgets/Alerts/alert_dialog.dart';
 

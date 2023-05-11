@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'header_text.dart';
 
-import '../../../utils/my_colors.dart';
+import '../../../../utils/my_colors.dart';
 
 Widget headerDoubleText({
   String? textHeader,

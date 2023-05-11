@@ -8,7 +8,7 @@ import 'favorite_tab/view/favorite_tab.dart';
 import 'profile_tab/view/profile_tab.dart';
 
 import '../commons_widgets/Alerts/alert_dialog.dart';
-import '../commons_widgets/rounded_button.dart';
+import '../commons_widgets/Buttons/rounded_button.dart';
 
 import '../../../utils/my_colors.dart';
 

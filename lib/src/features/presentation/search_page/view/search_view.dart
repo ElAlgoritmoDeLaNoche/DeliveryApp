@@ -2,12 +2,12 @@
 
 import 'package:flutter/material.dart';
 
-import '../../commons_widgets/card_vertical.dart';
-import '../../commons_widgets/header_text.dart';
-import '../../commons_widgets/header_double.dart';
+import '../../commons_widgets/Cards/card_vertical.dart';
+import '../../commons_widgets/Headers/header_text.dart';
+import '../../commons_widgets/Headers/header_double.dart';
 
 import '../../../../utils/my_colors.dart';
-import '../../commons_widgets/populars_card.dart';
+import '../../commons_widgets/Cards/populars_card.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});

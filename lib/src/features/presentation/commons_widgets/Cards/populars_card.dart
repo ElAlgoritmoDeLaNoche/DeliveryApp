@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'header_text.dart';
+import '../Headers/header_text.dart';
 
-import '../../../utils/my_colors.dart';
+import '../../../../utils/my_colors.dart';
 
 Widget popularsCard({
   BuildContext? context,

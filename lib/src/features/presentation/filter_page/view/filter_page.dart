@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../features/presentation/commons_widgets/header_text.dart';
+import '../../commons_widgets/Headers/header_text.dart';
 
 import '../../../../features/presentation/filter_page/view/customWidgets/cuisines_filters.dart';
 import '../../../../features/presentation/filter_page/view/customWidgets/list_tile_checked.dart';

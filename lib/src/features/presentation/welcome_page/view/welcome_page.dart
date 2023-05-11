@@ -3,10 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../commons_widgets/header_text.dart';
+import '../../commons_widgets/Headers/header_text.dart';
 
 import '../../../../utils/my_colors.dart';
-import '../../commons_widgets/rounded_button.dart';
+import '../../commons_widgets/Buttons/rounded_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});

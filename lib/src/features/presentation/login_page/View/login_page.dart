@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../commons_widgets/back_button.dart';
-import '../../commons_widgets/rounded_button.dart';
+import '../../commons_widgets/BackButtons/back_button.dart';
+import '../../commons_widgets/Buttons/rounded_button.dart';
 
 import '../../../../utils/my_colors.dart';
 

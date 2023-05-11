@@ -1,7 +1,6 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
 
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../../commons_widgets/card_vertical.dart';
 import '../../commons_widgets/header_text.dart';
@@ -146,24 +145,18 @@ Widget _sliderRecentSearch(BuildContext context) {
   return Container(
     margin: const EdgeInsets.only(top: 5),
     height: 190,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return cardVertical(
-              context: context,
-              width: 150,
-              height: 120,
-              title: "Andy & Cindy's Diner",
-              subtitle: '87 Botsford Circle Apt',
-              image: const NetworkImage(
-                'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80',
-              ),
-            );
-          },
+        return cardVertical(
+          context: context,
+          width: 150,
+          height: 120,
+          title: "Andy & Cindy's Diner",
+          subtitle: '87 Botsford Circle Apt',
+          image: const NetworkImage(
+            'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80',
+          ),
         );
       },
     ),

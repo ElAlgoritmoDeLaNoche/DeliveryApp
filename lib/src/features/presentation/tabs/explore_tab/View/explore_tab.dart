@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_swiper/flutter_swiper.dart';
-
 import '../../../commons_widgets/header_text.dart';
 import '../../../commons_widgets/populars_card.dart';
 
@@ -163,16 +161,10 @@ Widget _topBar(BuildContext context) {
 Widget _sliderCards(BuildContext context) {
   return Container(
     height: 350,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return _target(context);
-          },
-        );
+        return _target(context);
       },
     ),
   );
@@ -310,16 +302,10 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
 Widget _sliderCollections(BuildContext context) {
   return Container(
     height: 180,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return _targetCollection(context);
-          },
-        );
+        return _targetCollection(context);
       },
     ),
   );

@@ -7,10 +7,12 @@ Widget headerText({
   Color color = Colors.black,
   FontWeight fontWeight = FontWeight.bold,
   double? fontSize,
+  TextAlign textAlign = TextAlign.justify,
 }) {
   return Container(
     child: Text(
       text,
+      textAlign: textAlign,
       style: TextStyle(
         color: color,
         fontWeight: fontWeight,

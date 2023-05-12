@@ -36,6 +36,9 @@ class _CollectionsPageState extends State<CollectionsPage> {
                 _card(context),
                 _card(context),
                 _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
               ],
             ),
           )
@@ -47,7 +50,9 @@ class _CollectionsPageState extends State<CollectionsPage> {
 
 Widget _card(BuildContext context) {
   return GestureDetector(
-    onTap: () {},
+    onTap: () {
+      Navigator.pushNamed(context, 'collection-detail');
+    },
     child: Stack(
       children: [
         ClipRRect(
@@ -84,7 +89,7 @@ Widget _card(BuildContext context) {
                 fontSize: 15,
                 color: Colors.white,
                 fontWeight: FontWeight.w300,
-              )
+              ),
             ],
           ),
         )

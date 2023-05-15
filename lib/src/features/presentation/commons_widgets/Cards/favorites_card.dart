@@ -64,7 +64,7 @@ Widget favoritesCard({
                     IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.bookmark_add,
+                        Icons.bookmark,
                         size: 25,
                         color:
                             isFavorite! ? MyColors.pinkColor : Colors.grey[300],

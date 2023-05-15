@@ -9,6 +9,7 @@ import '../features/presentation/search_page/view/search_view.dart';
 import '../features/presentation/filter_page/view/filter_page.dart';
 import '../features/presentation/collections_page/view/collections_view.dart';
 import '../features/presentation/collection_detail_page/view/collection_detail_page.dart';
+import '../features/presentation/place_detail_page/view/place_detail_page.dart';
 
 final routes = <String, WidgetBuilder>{
   'welcome': (BuildContext context) => const WelcomePage(),
@@ -20,4 +21,5 @@ final routes = <String, WidgetBuilder>{
   'filter': (BuildContext context) => const FilterPage(),
   'collections': (BuildContext context) => const CollectionsPage(),
   'collection-detail': (BuildContext context) => const CollectionDetailPage(),
+  'place-detail': (BuildContext context) => const PlaceDetailPage(),
 };

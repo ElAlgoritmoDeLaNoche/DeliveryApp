@@ -1,10 +1,12 @@
-import 'package:deliveryapp/src/utils/my_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../../features/presentation/commons_widgets/Headers/header_text.dart';
 
 import '../../../../features/presentation/commons_widgets/BackButtons/back_button.dart';
 import '../../commons_widgets/Cards/favorites_card.dart';
+
+import '../../../../../src/utils/my_colors.dart';
 
 class CollectionDetailPage extends StatefulWidget {
   const CollectionDetailPage({super.key});
@@ -16,6 +18,13 @@ class CollectionDetailPage extends StatefulWidget {
 class _CollectionDetailPageState extends State<CollectionDetailPage> {
   @override
   Widget build(BuildContext context) {
+    //
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.light.copyWith(
+        statusBarColor: Colors.white,
+      ),
+    );
+
     return Scaffold(
       body: CustomScrollView(
         slivers: [

@@ -1,6 +1,7 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe, sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../commons_widgets/Headers/header_text.dart';
 import '../../../commons_widgets/Cards/populars_card.dart';
@@ -17,6 +18,10 @@ class ExploreTab extends StatefulWidget {
 class _ExploreTabState extends State<ExploreTab> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.dark.copyWith(),
+    );
+
     return SafeArea(
       child: CustomScrollView(
         slivers: [
@@ -171,95 +176,100 @@ Widget _sliderCards(BuildContext context) {
 }
 
 Widget _target(BuildContext context) {
-  return Container(
-    margin: const EdgeInsets.all(5),
-    child: Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: const Image(
-            width: 210,
-            height: 270,
-            fit: BoxFit.cover,
-            image: NetworkImage(
-              'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1681&q=80',
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, 'place-detail');
+    },
+    child: Container(
+      margin: const EdgeInsets.all(5),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: const Image(
+              width: 210,
+              height: 270,
+              fit: BoxFit.cover,
+              image: NetworkImage(
+                'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1681&q=80',
+              ),
             ),
           ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: const EdgeInsets.only(top: 10),
-              alignment: Alignment.topLeft,
-              child: const Text(
-                "Andy & Cindy's Diner",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17,
-                ),
-              ),
-            ),
-            Container(
-              child: Text(
-                "87 Botsford Circle Apt",
-                style: TextStyle(
-                  color: MyColors.disabledColor,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13,
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.star,
-                  color: MyColors.yellowColor,
-                  size: 16,
-                ),
-                const Text(
-                  '4.8 ',
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 10),
+                alignment: Alignment.topLeft,
+                child: const Text(
+                  "Andy & Cindy's Diner",
                   style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
                   ),
                 ),
-                Text(
-                  "(233 ratings)",
+              ),
+              Container(
+                child: Text(
+                  "87 Botsford Circle Apt",
                   style: TextStyle(
                     color: MyColors.disabledColor,
                     fontWeight: FontWeight.w500,
                     fontSize: 13,
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 5),
-                  width: 80,
-                  height: 18,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      elevation: 0.5,
-                      shape: const StadiumBorder(),
-                      backgroundColor: MyColors.primaryColor,
-                    ),
-                    onPressed: () {
-                      print('Delivery');
-                    },
-                    child: const Text(
-                      'Delivery',
-                      style: TextStyle(
-                        fontSize: 12,
-                      ),
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: MyColors.yellowColor,
+                    size: 16,
+                  ),
+                  const Text(
+                    '4.8 ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
                     ),
                   ),
-                )
-              ],
-            )
-          ],
-        )
-      ],
+                  Text(
+                    "(233 ratings)",
+                    style: TextStyle(
+                      color: MyColors.disabledColor,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
+                    width: 80,
+                    height: 18,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.5,
+                        shape: const StadiumBorder(),
+                        backgroundColor: MyColors.primaryColor,
+                      ),
+                      onPressed: () {
+                        print('Delivery');
+                      },
+                      child: const Text(
+                        'Delivery',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     ),
   );
 }

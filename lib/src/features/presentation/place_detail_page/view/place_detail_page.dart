@@ -711,7 +711,7 @@ class PlaceDetailPage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(top: 10, left: 20),
             child: headerText(
-              text: '+Edit your review',
+              text: '+ Edit your review',
               color: MyColors.primaryColor,
               fontWeight: FontWeight.w500,
               fontSize: 15,

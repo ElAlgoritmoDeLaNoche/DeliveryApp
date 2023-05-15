@@ -10,6 +10,7 @@ class MyColors {
   static Color accentColor = const Color.fromRGBO(10, 31, 68, 1.0);
   static Color yellowColor = const Color.fromRGBO(255, 204, 0, 1.0);
   static Color greyColor = const Color.fromRGBO(184, 187, 198, 1.0);
+  static Color dividerColor = Colors.blueGrey.shade200;
   static Color pinkColor = const Color.fromRGBO(255, 45, 85, 1.0);
   static Color whiteColor = Colors.white;
   static Color blackColor = Colors.black;

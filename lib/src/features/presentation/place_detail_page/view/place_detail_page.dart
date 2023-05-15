@@ -391,7 +391,7 @@ class PlaceDetailPage extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(left: 10),
+                // margin: const EdgeInsets.only(left: 10),
                 child: IconButton(
                   onPressed: () {},
                   icon: Icon(

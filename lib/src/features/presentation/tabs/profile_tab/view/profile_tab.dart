@@ -23,7 +23,10 @@ class _ProfileTabState extends State<ProfileTab> {
     return Scaffold(
       body: Column(
         children: [
-          _header(context),
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'profile-detail'),
+            child: _header(context),
+          ),
           _contentProfile(),
         ],
       ),
